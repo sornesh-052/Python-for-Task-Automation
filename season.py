@@ -1,13 +1,16 @@
-month = input("Input the month (e.g. Jan, Feb etc.): ")
-day = int(input("Input the day: "))
-
-if(month=="Mar"and day>19)or(month=="Apr")or(month=="May")or(month=="Jun" and day<21):
-    season = 'Summer'
-elif(month=="Jun"and day>20)or(month=="Jul")or(month=="Aug")or(month=="Sep" and day<22):
-    season = 'Spring'
-elif(month=="Sep"and day>21)or(month=="Oct")or(month=="Nov")or(month=="Dec" and day<21):
-    season = 'Fall'
+mon=input("enter month ")
+date=int(input("enter date "))
+if date>31:
+    print("invalid")
+    if mon=="feb":
+        if date>28:
+            print("invalid")
+elif(mon=="mar" and date>=20) or (mon=="apr")or (mon=="may")or (mon=="jun"and date<=20):
+    season="summer"
+elif(mon=="jun" and date>=21) or (mon=="jul")or (mon=="aug")or (mon=="sep"and date<=21):
+    season="spring"
+elif(mon=="sep" and date>=22) or (mon=="oct")or (mon=="nov")or (mon=="dec"and date<=20):
+    season="fall"
 else:
-    season = 'winter'
-
-print("The Season is currently",season)
+    season="winter"
+    print("the season is ",season)
